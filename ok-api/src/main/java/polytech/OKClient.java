@@ -1,7 +1,8 @@
 package polytech;
 
-import polis.ok.api.domain.Attachment;
-import polis.ok.api.exceptions.OkApiException;
+
+import polytech.domain.Attachment;
+import polytech.exceptions.OkApiException;
 
 import java.io.File;
 import java.io.IOException;
