@@ -4,9 +4,10 @@ import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
-import polis.ok.api.exceptions.CodeExpiredException;
-import polis.ok.api.exceptions.OkApiException;
-import polis.ok.api.exceptions.TokenExpiredException;
+import polytech.exceptions.CodeExpiredException;
+import polytech.exceptions.OkApiException;
+import polytech.exceptions.TokenExpiredException;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;

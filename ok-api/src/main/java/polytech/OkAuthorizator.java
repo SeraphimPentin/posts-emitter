@@ -6,7 +6,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import polis.ok.api.exceptions.OkApiException;
+import polytech.exceptions.OkApiException;
+
 
 import java.io.IOException;
 import java.net.URI;
@@ -15,7 +16,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import static polis.ok.api.LoggingUtils.*;
+import static polytech.LoggingUtils.*;
+
 
 public final class OkAuthorizator {
     private static final String AUTH_URI = "https://connect.ok.ru/oauth/authorize";
