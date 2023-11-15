@@ -15,8 +15,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import polis.ok.api.domain.Attachment;
-import polis.ok.api.exceptions.OkApiException;
+import polytech.domain.Attachment;
+import polytech.exceptions.OkApiException;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +32,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
-import static polis.ok.api.LoggingUtils.*;
+import static polytech.LoggingUtils.*;
+
 
 public class OkClientImpl implements OKClient {
     private static final String OK_METHODS_URI = "https://api.ok.ru/fb.do";
