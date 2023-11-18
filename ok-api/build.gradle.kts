@@ -2,7 +2,7 @@ plugins {
     java
 }
 
-group = "polis"
+group = "polytech"
 version = "1.0.0"
 
 repositories {

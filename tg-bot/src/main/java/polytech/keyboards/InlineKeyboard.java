@@ -1,12 +1,12 @@
-package polytech;
+package polytech.keyboards;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-import polis.callbacks.typed.objects.GoBackCallback;
-import polis.callbacks.typed.parsers.GoBackCallbackParser;
+import polytech.callbacks.typed.objects.GoBackCallback;
+import polytech.callbacks.typed.parsers.GoBackCallbackParser;
 
 import java.util.ArrayList;
 import java.util.List;

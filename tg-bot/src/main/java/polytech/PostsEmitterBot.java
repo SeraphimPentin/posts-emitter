@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import polis.bot.Bot;
+import polytech.bot.Bot;
 
 @SpringBootApplication
 public class PostsEmitterBot {
