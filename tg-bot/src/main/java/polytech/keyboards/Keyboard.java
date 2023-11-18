@@ -1,4 +1,4 @@
-package polytech;
+package polytech.keyboards;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import polytech.util.Emojis;

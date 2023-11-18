@@ -1,4 +1,4 @@
-package polytech;
+package polytech.keyboards;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
