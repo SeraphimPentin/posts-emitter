@@ -1,4 +1,4 @@
-package polis;
+package polytech;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,11 +11,11 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import polis.bot.Bot;
 
 @SpringBootApplication
-public class FeedMigratorBot {
-    private static final Logger LOGGER = LoggerFactory.getLogger(FeedMigratorBot.class);
+public class PostsEmitterBot {
+    private static final Logger LOGGER = LoggerFactory.getLogger(PostsEmitterBot.class);
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(FeedMigratorBot.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(PostsEmitterBot.class, args);
         Bot bot = context.getBean(Bot.class);
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
