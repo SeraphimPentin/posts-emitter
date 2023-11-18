@@ -1,8 +1,8 @@
-CREATE  KEYSPACE IF NOT EXISTS feed_migrator
+CREATE  KEYSPACE IF NOT EXISTS posts_emitter
     WITH REPLICATION = {
         'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
-CREATE TABLE IF NOT EXISTS feed_migrator.accounts (
+CREATE TABLE IF NOT EXISTS posts_emitter.accounts (
     chat_id        bigint,
     social_media   varchar,
     account_id     bigint,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS feed_migrator.accounts (
     PRIMARY KEY ((chat_id), social_media, account_id)
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.channel_groups (
+CREATE TABLE IF NOT EXISTS posts_emitter.channel_groups (
     channel_id       bigint,
     social_media     varchar,
     group_id         bigint,
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS feed_migrator.channel_groups (
     PRIMARY KEY ((channel_id), social_media, group_id)
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.current_account (
+CREATE TABLE IF NOT EXISTS posts_emitter.current_account (
     chat_id        bigint,
     social_media   varchar,
     account_id     bigint,
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS feed_migrator.current_account (
     PRIMARY KEY ((chat_id))
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.current_channel (
+CREATE TABLE IF NOT EXISTS posts_emitter.current_channel (
     chat_id          bigint,
     channel_id       bigint,
     channel_username varchar,
     PRIMARY KEY ((chat_id))
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.current_group (
+CREATE TABLE IF NOT EXISTS posts_emitter.current_group (
     chat_id      bigint,
     social_media varchar,
     group_id     bigint,
@@ -51,13 +51,13 @@ CREATE TABLE IF NOT EXISTS feed_migrator.current_group (
     PRIMARY KEY ((chat_id))
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.current_state (
+CREATE TABLE IF NOT EXISTS posts_emitter.current_state (
     chat_id bigint,
     state   varchar,
     PRIMARY KEY ((chat_id))
 );
 
-CREATE TABLE IF NOT EXISTS feed_migrator.user_channels (
+CREATE TABLE IF NOT EXISTS posts_emitter.user_channels (
     channel_id       bigint,
     chat_id          bigint,
     channel_username varchar,
