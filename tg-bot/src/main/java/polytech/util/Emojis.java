@@ -1,4 +1,4 @@
-package polis.util;
+package polytech.util;
 
 public class Emojis {
 

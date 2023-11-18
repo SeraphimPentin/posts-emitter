@@ -1,13 +1,13 @@
-package polis.commands.impl;
+package polytech.commands.impl;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Chat;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.bots.AbsSender;
-import polis.commands.Command;
-import polis.commands.context.Context;
-import polis.util.IState;
-import polis.util.State;
+import polytech.commands.Command;
+import polytech.commands.context.Context;
+import polytech.util.IState;
+import polytech.util.State;
 
 import java.util.List;
 

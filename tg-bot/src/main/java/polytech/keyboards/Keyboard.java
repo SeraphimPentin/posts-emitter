@@ -1,7 +1,7 @@
 package polytech;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import polis.util.Emojis;
+import polytech.util.Emojis;
 
 import java.util.List;
 
