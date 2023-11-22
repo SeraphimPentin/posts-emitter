@@ -1,7 +1,7 @@
 package polytech.callbacks.typed.objects;
 
-import polis.callbacks.typed.CallbackType;
-import polis.callbacks.typed.TypedCallback;
+import polytech.callbacks.typed.CallbackType;
+import polytech.callbacks.typed.TypedCallback;
 
 public final class YesNoCallback implements TypedCallback {
     public static final YesNoCallback YES_CALLBACK = new YesNoCallback(true);
