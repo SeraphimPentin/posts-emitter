@@ -36,7 +36,29 @@ public class MessageSender {
     }
 
     public void sendAnswer(Long chatId, String userName, String text) {
-        //todo
+        SendMessage answer = new SendMessage();
+
+        //TODO DONT USE THIS SHIT
+        if (ButtonsUtil.BUTTONS_TEXT_MAP.containsKey(text)) {
+            List<String> commandsList = ButtonsUtil.BUTTONS_TEXT_MAP.get(text);
+            answer = replyKeyboard.createSendMessage(chatId, text, commandsList.size(), commandsList,
+                    GO_BACK_BUTTON_TEXT);
+        } else {
+            answer.setParseMode(ParseMode.HTML);
+            answer.disableWebPagePreview();
+        }
+        answer.setChatId(chatId.toString());
+        answer.setText(text);
+
+        try {
+            sender.execute(answer);
+        } catch (TelegramApiException e) {
+            if (userName != null) {
+                logger.error(String.format("Cannot execute command of user %s: %s", userName, e.getMessage()));
+            } else {
+                logger.error(String.format("Cannot execute command: %s", e.getMessage()));
+            }
+        }
     }
 
     public void deleteLastMessage(Message msg) throws TelegramApiException {
