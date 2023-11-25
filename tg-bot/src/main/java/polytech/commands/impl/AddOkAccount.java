@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.bots.AbsSender;
 import polytech.commands.Command;
 import polytech.commands.context.Context;
-import polytech.ok.api.OkAuthorizator;
+import polytech.OkAuthorizator;
 import polytech.util.IState;
 import polytech.util.State;
 

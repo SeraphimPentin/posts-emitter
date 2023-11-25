@@ -1,7 +1,5 @@
 package polytech.commands;
 
-import org.springframework.stereotype.Component;
-
 //TODO REMOVE
 @Deprecated
 public class NonCommand {

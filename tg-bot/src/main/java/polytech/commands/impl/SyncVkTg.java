@@ -8,6 +8,6 @@ import polytech.util.State;
 public class SyncVkTg extends SyncGroupWithChannel {
     @Override
     public IState state() {
-        return State.SyncOkTg;
+        return State.SyncVkTg;
     }
 }
