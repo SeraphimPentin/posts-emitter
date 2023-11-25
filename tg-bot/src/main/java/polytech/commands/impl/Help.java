@@ -12,7 +12,7 @@ import polytech.util.State;
 @Component
 public class Help extends Command {
     private static final String HELP = """
-            <b>Feed-Migrator</b> - бот авто-постинга в Телеграмме.
+            <b>Posts-Emitter</b> - бот авто-постинга в Телеграмме.
             Бот позволяет подключить несколько аккаунтов с группами в социальных сетях ВКонтакте и Одноклассники к"""
             + """
              Телеграмм-каналу и автоматически публиковать контент из канала одновременно во все группы.
