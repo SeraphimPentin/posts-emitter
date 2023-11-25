@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import polytech.commands.NonCommand;
-import polytech.ok.api.OkAppProperties;
+import polytech.OkAppProperties;
 import polytech.util.State;
 
 import java.io.IOException;
