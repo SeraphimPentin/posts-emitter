@@ -4,18 +4,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import polis.commands.NonCommand;
-import polis.commands.context.Context;
-import polis.commands.context.ContextStorage;
-import polis.data.domain.Account;
-import polis.data.repositories.AccountsRepository;
-import polis.util.SocialMedia;
-import polis.util.State;
-import polis.vk.api.VkApiMethods;
-import polis.vk.api.VkAuthorizator;
-import polis.vk.api.exceptions.VkApiException;
+import polytech.commands.NonCommand;
+import polytech.commands.context.Context;
+import polytech.commands.context.ContextStorage;
+import polytech.data.domain.Account;
+import polytech.data.repositories.AccountsRepository;
+import polytech.util.SocialMedia;
+import polytech.util.State;
+import polytech.vk.api.VkApiMethods;
+import polytech.vk.api.VkAuthorizator;
+import polytech.vk.api.exceptions.VkApiException;
 
-import static polis.commands.Command.USERNAME_NOT_FOUND;
+import static polytech.commands.Command.USERNAME_NOT_FOUND;
 
 @Component
 public class VkDataCheck {
