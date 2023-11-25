@@ -7,9 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import polis.commands.NonCommand;
-import polis.ok.api.OkAppProperties;
-import polis.util.State;
+import polytech.commands.NonCommand;
+import polytech.OkAppProperties;
+import polytech.util.State;
 
 import java.io.IOException;
 import java.net.URI;
@@ -19,7 +19,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Objects;
 
-import static polis.commands.Command.USER_ID_NOT_FOUND;
+import static polytech.commands.Command.USER_ID_NOT_FOUND;
 
 @Component
 public class OkDataCheck {
