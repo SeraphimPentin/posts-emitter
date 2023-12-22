@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  cassandra:
+    image: bitnami/cassandra:latest
+    ports:
+      - 9042:9042
+    volumes:
+      - ~/apps/cassandra:/bitnami
+      - ./data/cql:/docker-entrypoint-initdb.d
+    hostname: cassandra-node-1
+    networks:
+      - PE-network
+    environment:
+      - CASSANDRA_CLUSTER_NAME=PE-cluster
+      - CASSANDRA_USER=cassandra
+      - CASSANDRA_PASSWORD=cassandra
+      - CASSANDRA_HOST=cassandra-node-1
+    healthcheck:
+      test: [ "CMD", "cqlsh", "-u", "cassandra", "-p", "cassandra" ]
+      interval: 1m
+      timeout: 15s
+      retries: 5
+
+  tg-bot:
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    build:
+      dockerfile: Dockerfile
+    networks:
+      - PE-network
+
+networks:
+  PE-network:
+    name: PE-network
